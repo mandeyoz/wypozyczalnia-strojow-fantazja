@@ -1,1 +1,1 @@
-# wypozyczalnia-strojow-fantazja
+# Wypozyczalnia strojów FANTAZJA
