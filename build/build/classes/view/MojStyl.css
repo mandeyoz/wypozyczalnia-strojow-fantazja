@@ -1,0 +1,253 @@
+.background-1 {
+    
+    -fx-background-image: url("dodaj.jpg");
+ 
+}
+.background-2 {
+    
+    -fx-background-image: url("1.jpg");
+ 
+}
+.background-3 {
+    
+    -fx-background-image: url("12.jpg");
+ 
+}
+.background-4 {
+    
+    -fx-background-image: url("warstwa1.jpg");
+ 
+}
+.background-5 {
+    
+    -fx-background-image: url("warstwa2.jpg");
+ 
+}
+.background-6 {
+    
+    -fx-background-image: url("warstwa3.jpg");
+ 
+}
+.background-7 {
+    
+    -fx-background-image: url("warstwa4.jpg");
+ 
+}
+.background-8 {
+    
+    -fx-background-image: url("warstwa5.jpg");
+    
+    }
+.background-9 {
+    
+    -fx-background-image: url("warstwa6.jpg"); 
+}
+.background-9 {
+    
+    -fx-background-image: url("warstwa7.jpg"); 
+}
+.background-Galeria-Logo {
+    
+    -fx-background-image: url("warstwaGaleriaLogo.jpg"); 
+}
+.background-FlowPaneGaleria {
+    
+    -fx-background-image: url("warstwaFlowPane.jpg"); 
+}
+
+.background-tab-bar {
+    
+    -fx-background-image: url("menubarFINAL.jpg");
+ 
+}
+
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+    -fx-font-family: "Segoe UI ";
+    
+    }
+
+.tab-pane
+{
+	-fx-tab-min-width:230px;
+	-fx-tab-min-height: 30px;
+	 -fx-background-image: url("1.jpg");
+  
+    
+}
+
+.tab{
+    -fx-background-insets: 0 0 0 3,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e5e5e5;
+	-fx-text-fill: #1d1d1d;
+	-fx-font-family: "Segoe UI ";
+	
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #720059;
+    -fx-font-family: "Segoe UI ";
+}
+
+.tab .tab-label { 
+	-fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER;
+    -fx-text-fill: #720059;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+	
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+}
+
+
+
+
+
+.context-menu {
+    -fx-background-color: #720059;
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+    -fx-label-padding: 2;
+    
+    
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.table-view {
+ 
+    -fx-padding: 2;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+   
+   
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+   
+    -fx-font-family: "Segoe UI ";
+    -fx-text-fill: #720059;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.button {
+   
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+     -fx-font-family: "Segoe UI Semibold";
+    
+    -fx-background-color: #830662;
+    
+    -fx-font-size: 12pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 0, 1;
+}
+.button-2 {
+   -fx-font-family: "Segoe UI Semibold";
+    -fx-border-color: white;
+    -fx-border-width: 1;
+
+        -fx-background-color: #00ffed;
+        -fx-font-size: 10pt;
+    -fx-text-fill: #360f2c;
+
+}
+
+.button:hover {
+    -fx-background-color: #720059;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+
+.label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-2 {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+.date-picker-popup > .month-year-pane {
+   
+    -fx-background-color: #720059;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+}
+.text-field-1 {
+  -fx-min-height: 30px;
+  -fx-font-size: 12pt;
+  
+}
+
+.scroll-bar:horizontal .thumb {
+-fx-background-color:#720059;
+    
+-fx-background-insets: 0, 1, 2;
+
+}
+.scroll-bar:vertical .thumb {
+-fx-background-color:#720059;
+-fx-background-insets: 0, 1, 2;
+
+}
+.flow-pane {
+	-fx-spacing: 10;
+}
+
+
+
