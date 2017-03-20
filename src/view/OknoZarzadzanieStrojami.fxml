@@ -35,7 +35,8 @@
                           <menus>
                             <Menu mnemonicParsing="false" text="Menu">
                               <items>
-                                    <MenuItem mnemonicParsing="false" onAction="#handleNew" text="Nowa baza.." />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleNew" text="Utwórz nową bazę strojów.." />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleNewGallery" text="Utwórz nową galerie.." />
                                 <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Otwórz..." />
                                     <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Zapisz" />
                                     <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Zapisz jako.." />

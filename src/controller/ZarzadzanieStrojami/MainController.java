@@ -703,6 +703,25 @@ public class MainController {
 		pathSwiateczne=null;
 		pathZwierzeta=null;
 		
+		
+	}
+	@FXML
+	private void handleNewGallery() {
+
+		pathJaselka = null;
+		pathBajeczne=null;
+		pathDziki=null;
+		pathFilmowe=null;
+		pathHalloween=null;
+		pathHistoryczne=null;
+		pathInne=null;
+		pathMundurowe=null;
+		pathOwoce=null;
+		pathSuper=null;
+		pathSwiateczne=null;
+		pathZwierzeta=null;
+		
+		
 	}
 
 	@FXML
@@ -900,7 +919,42 @@ public class MainController {
 		}
 	}
 
-	
+	// @FXML
+	// public void openGaleria(){
+	//
+	//
+	// ScrollPane root = new ScrollPane();
+	// TilePane tile = new TilePane();
+	// tile.setStyle("-fx-background-color: ef99ff;");
+	// tile.setPadding(new Insets(15, 15, 15, 15));
+	// tile.setHgap(15);
+	// tile.setVgap(15);
+	//
+	// String path = "C:\\Users\\MaYDaY\\Desktop\\zarabie";
+	//
+	// File folder = new File(path);
+	// File[] listOfFiles = folder.listFiles();
+	//
+	// for (final File file : listOfFiles) {
+	// ImageView imageView;
+	// imageView = createImageView(file);
+	// tile.getChildren().addAll(imageView);
+	// }
+	//
+	//
+	// root.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Horizontal
+	// root.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED); // Vertical
+	// scroll bar
+	// root.setFitToWidth(true);
+	// root.setContent(tile);
+	//
+	// galleryStage.setWidth(Screen.getPrimary().getVisualBounds().getWidth());
+	// galleryStage.setHeight(Screen.getPrimary().getVisualBounds()
+	// .getHeight());
+	// Scene scene = new Scene(root);
+	// galleryStage.setScene(scene);
+	// galleryStage.show();
+	// }
 
 	@FXML
 	public void openGaleria() {
