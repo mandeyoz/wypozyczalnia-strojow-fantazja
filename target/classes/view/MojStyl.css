@@ -71,7 +71,7 @@
 
 .tab-pane
 {
-	-fx-tab-min-width:230px;
+	-fx-tab-min-width:180px;
 	-fx-tab-min-height: 30px;
 	 -fx-background-image: url("1.jpg");
   

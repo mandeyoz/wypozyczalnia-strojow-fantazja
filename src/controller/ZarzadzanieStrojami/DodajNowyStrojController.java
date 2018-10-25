@@ -3,7 +3,7 @@ package controller.ZarzadzanieStrojami;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
+import java.util.Optional;
 
 import javax.imageio.ImageIO;
 
@@ -15,7 +15,9 @@ import javafx.fxml.FXML;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
+
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
@@ -49,12 +51,17 @@ public class DodajNowyStrojController {
 	private TextField akcesoriaField;
 	@FXML
 	private TextField idField;
+	@FXML
+	private TextField addCategoryField;
 	
 	@FXML
 	private Button btnOK;
 	@FXML
 	private Button btnAnuluj;
-	
+	@FXML
+	private Button btnAddCategory;
+	@FXML
+	private Button btnDeleteCategory;
 	
 
 	private Stage dialogStage;
@@ -62,15 +69,16 @@ public class DodajNowyStrojController {
 	private boolean okClicked = false;
 	private File plik;
 	private BufferedImage bufferedImage;
-    private Image image;
+    @SuppressWarnings("unused")
+	private Image image;
     
     private String imagePath;
 	
 	private ObservableList<String> Rega³ = FXCollections.observableArrayList("A","B","C","D","E","F","G","H","I","J");
-	private ObservableList<String> Kategoria = FXCollections.observableArrayList
+	public static ObservableList<String> Kategoria = FXCollections.observableArrayList
 			("JASE£KA","ŒWI¥TECZNE","POSTACIE Z BAJEK","ZWIERZÊTA","HALLOWEEN","POSTACIE Z FILMÓW","SUPERBOHATER","DZIKI ZACHÓD","MUNDUROWE",
 					"HISTORYCZNE","OWOCE I WARZYWA","INNE");
-	
+
 	
 	@FXML
 	private void initialize() {
@@ -91,9 +99,47 @@ public class DodajNowyStrojController {
 	}
 	
 	
+	public void handleAddCategory(){
+		if(addCategoryField.getText().length()!=0){
+			String nowaKategoria = addCategoryField.getText().toString().toUpperCase();
+			Kategoria.add(nowaKategoria);
+			addCategoryField.clear();
+			
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setHeaderText("Pomyœlnie dodano now¹ kategoriê : " + nowaKategoria);
+			alert.showAndWait();
+				
+		} else{
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setHeaderText("Wprowadz nazwê dla nowej kategorii");
+			alert.showAndWait();
+		}
+	}
 	
-	
+	public void handleDeleteCategory(){
+		
+		if(!(cbKategoria.getSelectionModel().isEmpty())){
+			String kategoriaDoUsuniecia = cbKategoria.getSelectionModel().getSelectedItem().toString();
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Confirmation Dialog");
+			alert.setHeaderText("Usuwanie kategorii");
+			alert.setContentText("Czy napewno chcesz usun¹æ "+ kategoriaDoUsuniecia);
 
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.get() == ButtonType.OK){
+				Kategoria.remove(kategoriaDoUsuniecia);
+			} else {
+			   alert.close();
+			}
+			
+		} else {
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setTitle("Nic nie wybrano");
+			alert.setHeaderText("Wybierz kategoriê któr¹ chcesz usun¹æ");
+			
+		
+		}
+	}
 
 	public boolean isOkClicked() {
 		return okClicked;
@@ -103,8 +149,8 @@ public class DodajNowyStrojController {
 	private void handleOkButton() {
 		if (isValid()) {
 
-			stroj.setRegal(cbRegal.getEditor().getText().toString());
-			stroj.setKategoria(cbKategoria.getEditor().getText().toString());
+			stroj.setRegal(cbRegal.getSelectionModel().getSelectedItem().toString());
+			stroj.setKategoria(cbKategoria.getSelectionModel().getSelectedItem().toString());
 			stroj.setNazwaStroju(nazwaStrojuField.getText());
 			stroj.setWymiary(wymiaryField.getText());
 			stroj.setAkcesoria(akcesoriaField.getText());
@@ -197,5 +243,15 @@ public class DodajNowyStrojController {
 				return false;
 			}
 		}
+
+		public ObservableList<String> getKategoria() {
+			return DodajNowyStrojController.Kategoria;
+		}
+
+		public void setKategoria(ObservableList<String> kategoria) {
+			Kategoria = kategoria;
+		}
 	
+		
+		
 }

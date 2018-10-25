@@ -24,6 +24,7 @@ public class Rezerwacja{
 	}
 	
 	
+	
 	public Rezerwacja(String dane, String telefon, String termin, int id,String nazwaStroju,String imagePath,String dataOdbioru) {
 
 		this.dane = new SimpleStringProperty(dane);
